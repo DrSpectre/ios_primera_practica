@@ -1,24 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mi_primera_app_storyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto de place holder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5um-uy-jHs">
+                                <rect key="frame" x="0.0" y="182" width="393" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSY-rr-CAA">
+                                <rect key="frame" x="147" y="434" width="99" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="¡Pulsame!"/>
+                                <connections>
+                                    <action selector="cuando_le_picamos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OZr-gm-ozI"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Texto de prueba por ahora" borderStyle="roundedRect" placeholder="Introduce aqui tu texto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gHU-r0-gN2">
+                                <rect key="frame" x="0.0" y="300" width="393" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gHU-r0-gN2" firstAttribute="top" secondItem="5um-uy-jHs" secondAttribute="bottom" constant="97" id="2pn-Es-dhD"/>
+                            <constraint firstItem="gHU-r0-gN2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bb4-S6-9WR"/>
+                            <constraint firstItem="eSY-rr-CAA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Dw9-dx-TNw"/>
+                            <constraint firstItem="5um-uy-jHs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="123" id="Ibq-7A-b5F"/>
+                            <constraint firstItem="5um-uy-jHs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NRK-KE-Dhj"/>
+                            <constraint firstItem="gHU-r0-gN2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eTP-8r-ltG"/>
+                            <constraint firstItem="5um-uy-jHs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="v30-8i-ZlV"/>
+                            <constraint firstItem="eSY-rr-CAA" firstAttribute="top" secondItem="gHU-r0-gN2" secondAttribute="bottom" constant="100" id="xAH-sw-YLi"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cajon_de_texto" destination="5um-uy-jHs" id="AIg-Mx-ja6"/>
+                        <outlet property="entrada_texto" destination="gHU-r0-gN2" id="mYE-uP-mug"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="103" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
